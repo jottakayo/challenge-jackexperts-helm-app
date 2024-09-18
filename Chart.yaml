@@ -1,0 +1,5 @@
+apiVersion: v2
+name: html-customer-app
+description: Helm Chart para customização de uma página HTML customizável.
+version: 0.1.0 #Buscar alterar posteriormente na pipeline, para cada biuldada atualizar a versão.
+appVersion: "1.0"
