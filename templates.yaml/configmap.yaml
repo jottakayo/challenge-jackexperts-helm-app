@@ -6,7 +6,7 @@ metadata:
     app: html-customer-app
     desafio: jackexperts
 data:
-  customer.html:              
+  customer.html: |               
     <div class="center-text">
       {{ .Values.centerText }}    # Texto dinâmico
     </div>
