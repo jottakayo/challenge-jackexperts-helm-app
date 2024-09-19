@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: html-container
-        image: jottakayoml/html-custom-app:1.0
+        image: jottakayoml/html-custom-app:latest
         volumeMounts:
         - name: html-volume
           mountPath: /usr/share/nginx/html/customer.html
