@@ -8,7 +8,7 @@ metadata:
 data:
   customer.html: |               
     <div class="center-text">
-      {{ .Values.centerText }}    # Texto dinâmico
+      {{ .Values.centerText }}
     </div>
     <div class="text">
-      {{ .Values.subText }}       # Subtexto dinâmico
+      {{ .Values.subText }}
