@@ -15,7 +15,7 @@ spec:
       labels:
         app: html-customer-app
         desafio: jackexperts
-      spec:
+    spec:
       containers:
       - name: html-container
         image: jottakayoml/html-custom-app:latest
