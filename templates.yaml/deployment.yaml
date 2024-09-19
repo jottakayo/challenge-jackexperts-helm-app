@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: html-customer-app
+  labels:
+    app: html-customer-app
+    desafio: jackexperts
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: html-customer-app
+  template:
+    metadata:
+      labels:
+        app: html-customer-app
+        desafio: jackexperts
