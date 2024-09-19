@@ -15,3 +15,15 @@ spec:
       labels:
         app: html-customer-app
         desafio: jackexperts
+      spec:
+      containers:
+      - name: html-container
+        image: jottakayoml/html-custom-app:latest
+        volumeMounts:
+        - name: html-volume
+          mountPath: /usr/share/nginx/html/customer.html
+          subPath: customer.html
+      volumes:
+      - name: html-volume
+        configMap:
+          name: html-customer-config
