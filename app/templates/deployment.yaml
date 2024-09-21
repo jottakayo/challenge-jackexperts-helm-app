@@ -30,3 +30,10 @@ spec:
       - name: html-volume
         configMap:
           name: html-customer-config
+          apiVersion: v1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: html-customer-app-service
+  namespace: app   
