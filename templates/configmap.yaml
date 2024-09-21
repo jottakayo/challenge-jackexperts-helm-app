@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: html-customer-config
+  namespace: app
   labels:
     app: html-customer-app
     desafio: jackexperts

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: html-customer-app
+  namespace: app
   labels:
     app: html-customer-app
     desafio: jackexperts
