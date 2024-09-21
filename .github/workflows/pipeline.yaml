@@ -3,10 +3,10 @@ name: Build, Push Docker Image e Deploy Kubernetes
 on:
   push:
     branches:
-      - pipeline-feature
+      - feature-custom-configmap
   pull_request:
     branches:
-      - pipeline-feature
+      - feature-custom-configmap
 
 jobs:
   build:
