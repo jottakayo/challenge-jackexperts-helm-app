@@ -23,3 +23,12 @@ jobs:
         cd app
         docker build -t jottakayoml/html-custom-app:latest .
         docker push jottakayoml/html-custom-app:latest
+
+    - name: Deploy to Kubernetes
+      env:
+        KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+      run: |
+        echo "${KUBE_CONFIG_DATA}" | base64 --decode > kubeconfig
+        export KUBECONFIG=$PWD/kubeconfig
+        helm install html-customer-app .
+        
