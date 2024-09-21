@@ -7,9 +7,10 @@ metadata:
     app: html-customer-app
     desafio: jackexperts
 data:
-  customer.html: |               
+  index.html: |               
     <div class="center-text">
       {{ .Values.centerText }}
     </div>
     <div class="text">
       {{ .Values.subText }}
+    </div>
