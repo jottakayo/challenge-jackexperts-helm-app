@@ -26,11 +26,7 @@ spec:
         - name: html-volume
           mountPath: /usr/share/nginx/html/customer.html
           subPath: customer.html
-        - name: temp-volume
-          mountPath: /tmp/customer.html
       volumes:
       - name: html-volume
         configMap:
           name: html-customer-config
-      - name: temp-volume
-        emptyDir: {}
