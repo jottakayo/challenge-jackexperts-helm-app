@@ -24,7 +24,7 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: html-volume
-          mountPath: /usr/share/nginx/html/customer.html
+          mountPath: /usr/share/nginx/html/index.html
           subPath: customer.html
       volumes:
       - name: html-volume
