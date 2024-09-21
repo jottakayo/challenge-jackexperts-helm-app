@@ -31,4 +31,4 @@ jobs:
         cd app
         echo "${KUBE_CONFIG_DATA}" | base64 --decode > kubeconfig
         export KUBECONFIG=$PWD/kubeconfig
-        helm upgrade --install html-customer-app . --namespace app --force
+        helm upgrade --install html-customer-app .
