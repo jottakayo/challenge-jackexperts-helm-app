@@ -32,4 +32,4 @@ jobs:
         cd app
         echo "${KUBE_CONFIG_DATA}" | base64 --decode > kubeconfig
         export KUBECONFIG=$PWD/kubeconfig
-        helm install html-customer-app 
+        helm install html-customer-app .
