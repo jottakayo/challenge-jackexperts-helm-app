@@ -1,0 +1,9 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - pipeline-feature
+  pull_request:
+    branches:
+      - pipeline-feature
