@@ -5,6 +5,6 @@ RUN adduser -D -g 'jack' jack \
 COPY ./html /usr/share/nginx/html
 RUN touch /var/run/nginx.pid \
     && chown -R jack:jack /var/run/nginx.pid
-EXPOSE 8080
+EXPOSE 80
 USER root
 CMD ["nginx", "-g", "daemon off;"]
