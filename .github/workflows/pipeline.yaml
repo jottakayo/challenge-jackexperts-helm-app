@@ -28,7 +28,8 @@ jobs:
       env:
         KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
       run: |
+        pwd
+        cd app
         echo "${KUBE_CONFIG_DATA}" | base64 --decode > kubeconfig
         export KUBECONFIG=$PWD/kubeconfig
-        helm install html-customer-app .
-        
+        helm install html-customer-app 
