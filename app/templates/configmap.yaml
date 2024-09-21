@@ -8,9 +8,17 @@ metadata:
     desafio: jackexperts
 data:
   customer.html: |
-    <div class="center-text">
-      {{ .Values.centerText }}
-    </div>
-    <div class="text">
-      {{ .Values.subText }}
-    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ .Values.title }}</title>
+    </head>
+    <body>
+        <h1>{{ .Values.headerText }}</h1>
+        <div id="customer">
+            <p>{{ .Values.description }}</p>
+        </div>
+    </body>
+    </html>
