@@ -8,23 +8,33 @@ O objetivo deste projeto é subir uma página HTML que pode ser facilmente custo
 
 ## Pré-Requisitos do projeto
 
-### Ferramentas Necessárias
+## Arquitetura e Ferramentas Utilizadas
 
 Ferramentas utilizadas para rodar o projeto:
 
-- **Docker**: gerencia containers.  
-[docker](https://docs.docker.com/get-docker/)
+- **Docker**: Usado para containerizar a aplicação NGINX com a página HTML.
+    - [Documentação do Docker](https://docs.docker.com/)
+    - [O que é Docker?](https://www.docker.com/resources/what-container)
+    - [Instalação do Docker](https://docs.docker.com/get-docker/)
 
-- **Kubernetes (kubectl)**: Para utilizar a linha de comando do Kubernetes.  
-[kubectl](https://kubernetes.io/docs/tasks/tools/)
+- **Kubernetes (AKS)**: Gerenciamento do ciclo de vida do aplicativo através do cluster Kubernetes na Azure. 
+    - [Documentação do Kubernetes](https://kubernetes.io/docs/home/)
+    - [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/)
+    - [Instalação do Kubectl](https://kubernetes.io/docs/tasks/tools/)
 
-- **Helm**: Gerenciador de pacotes pro Kubernetes.  
-[Helm](https://helm.sh/docs/intro/install/)
+- **Helm**: Implementado para gerenciar os deployments com controle sobre a configuração dinâmica da Pagina.
+    - [Documentação do Helm](https://helm.sh/docs/)
+    - [Sobre Helm Charts](https://helm.sh/docs/chart_template_guide/getting_started/)
+    - [Instalação do Helm](https://helm.sh/docs/intro/install/)
 
-- **Git**: Gerenciador de versões para o código.  
-[Git](https://git-scm.com/downloads)
-
-- **Azure CLI**: CLI usado para interagir na nuvem da AKS.  
-[CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+- **Terraform**: Cria o cluster AKS automatizado, usando IaC para manter a infraestrutura replicável caso preciso. 
+    - [Documentação do Terraform](https://developer.hashicorp.com/terraform/docs)
+    - [Introdução ao Terraform](https://learn.hashicorp.com/terraform)
+    - [Instalação do Terraform](https://developer.hashicorp.com/terraform/install)
+- **CI/CD Pipeline (GitHub Actions)**: Configurado para automação do build, push da imagem Docker no Docker Hub e deploy no cluster AKS usando Helm(upgrade).
+    - [Documentação do GitHub Actions](https://docs.github.com/en/actions)
+    - [Introdução do GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions)
+- **Azure CLI**: CLI usada para interagir na nuvem da AKS.
+    - [Instalação e documentação do Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 
 > **Dica:** Olhe bem se as ferramentas foram configuradas e nas versões mais atuais, para evitar erros de compatibilidade.
