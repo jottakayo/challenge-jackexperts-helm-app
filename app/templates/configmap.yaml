@@ -15,10 +15,11 @@ data:
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ .Values.title }}</title>
     </head>
-    <body>
-        <h1>{{ .Values.headerText }}</h1>
-        <div id="customer">
-            <p>{{ .Values.description }}</p>
-        </div>
-    </body>
-    </html>
+    </head>
+<body>
+    <h1 id="center-text">{{ .Values.headerText }}</h1>
+    <div id="text">
+        <p>{{ .Values.description }}</p>
+    </div>
+</body>
+</html>
