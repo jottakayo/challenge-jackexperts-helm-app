@@ -2,10 +2,10 @@ name: Build, Push Docker Image e Deploy Kubernetes
 on:
   push:
     branches:
-      - main
+      - readme-feature
   pull_request:
     branches:
-      - main
+      - readme-feature
 jobs:
   build:
     runs-on: ubuntu-latest
