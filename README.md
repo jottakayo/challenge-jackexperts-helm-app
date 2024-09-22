@@ -1,5 +1,5 @@
 # Aplicação HTML Customizável com Kubernetes e Helm
-![jackexperts](./img/img.png)
+<img src="./img/img.png" alt="jackexpert" width="400"/>
 
 ## 1. Introdução
 
