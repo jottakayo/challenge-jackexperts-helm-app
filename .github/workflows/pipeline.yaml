@@ -3,10 +3,10 @@ name: Build, Push Docker Image e Deploy Kubernetes
 on:
   push:
     branches:
-      - main
+      - change-user-feature
   pull_request:
     branches:
-      - main
+      - change-user-feature
 
 jobs:
   build:

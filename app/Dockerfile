@@ -7,5 +7,5 @@ RUN touch /var/run/nginx.pid \
     && chown -R jack:jack /var/run/nginx.pid \
     && chmod -R 755 /usr/share/nginx/html
 EXPOSE 80
-USER root
+USER jack
 CMD ["nginx", "-g", "daemon off;"]
