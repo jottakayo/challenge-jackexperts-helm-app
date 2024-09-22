@@ -32,4 +32,3 @@ spec:
           name: html-customer-config
       securityContext:
         runAsUser: 1000
-        fsGroup: 1000
