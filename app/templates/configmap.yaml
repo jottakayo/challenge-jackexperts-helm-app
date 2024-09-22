@@ -61,8 +61,8 @@ data:
             <p>{{ .Values.descricao }}</p>
         </div>
         <div class="links">
-            <p>Nos siga no insta: <a href="https://www.instagram.com/jackexperts/" target="_blank">jackexperts</a></p>
-            <p>E não perca nosso evento ^^: <a href="https://www.instagram.com/devopsdaysbsb/" target="_blank">DevOps Day Brasília</a></p>
+            <p>Nos siga no insta: <a href="{{ .Values.link1 }}" target="_blank">jackexperts</a></p>
+            <p>E não perca nosso evento ^^: <a href="{{ .Values.link2 }}" target="_blank">DevOps Day Brasília</a></p>
         </div>
     </body>
     </html>
