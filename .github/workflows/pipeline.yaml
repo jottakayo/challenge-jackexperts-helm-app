@@ -1,5 +1,4 @@
 name: Build, Push Docker Image e Deploy Kubernetes
-
 on:
   push:
     branches:
@@ -7,23 +6,18 @@ on:
   pull_request:
     branches:
       - change-user-feature
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-
-    - name: Log in to Docker Hub
+    - name: Entrando no Docker Hub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-
-    - name: Build and Push the Docker image
+    - name: Build e Push do Docker image
       run: |
         cd app
         docker build -t jottakayoml/html-custom-app:latest .
         docker push jottakayoml/html-custom-app:latest
-
     - name: Deploy to Kubernetes
       env:
         KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
