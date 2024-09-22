@@ -14,38 +14,37 @@ data:
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ .Values.title }}</title>
-<style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: #000000; 
-            color: #ffffff; 
-        }
-        .center-text {
-        text-align: center;
-        font-size: 36px;
-        color: #f5c842; 
-        padding: 20px;
-        border: 2px solid #ffffff;
-        background-color: #1c1c1c; 
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    .text {
-        text-align: center;
-        font-size: 18px;
-        color: #cccccc;
-        padding: 15px;
-        border: 1px solid #4f4f4f;
-        background-color: #2c2c2c;
-        border-radius: 8px; 
-    }
-    </style>
-
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: #000000; 
+                color: #ffffff; 
+            }
+            .center-text {
+                text-align: center;
+                font-size: 36px;
+                color: #f5c842; 
+                padding: 20px;
+                border: 2px solid #ffffff;
+                background-color: #1c1c1c; 
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+            .text {
+                text-align: center;
+                font-size: 18px;
+                color: #cccccc;
+                padding: 15px;
+                border: 1px solid #4f4f4f;
+                background-color: #2c2c2c;
+                border-radius: 8px; 
+            }
+        </style>
     </head>
     <body>
         <h1 id="style">{{ .Values.headerText }}</h1>
