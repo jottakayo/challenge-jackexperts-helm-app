@@ -2,10 +2,10 @@ name: Build, Push Docker Image e Deploy Kubernetes
 on:
   push:
     branches:
-      - change-user-feature
+      - main
   pull_request:
     branches:
-      - change-user-feature
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
