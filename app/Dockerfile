@@ -9,7 +9,6 @@ RUN touch /var/run/nginx.pid \
     && chmod -R 755 /usr/share/nginx/html
 RUN apk add --no-cache libcap \
     && setcap 'cap_net_bind_service=+ep' /usr/sbin/nginx
-
-EXPOSE 8080
+EXPOSE 80
 USER jack
 CMD ["nginx", "-g", "daemon off;", "-c", "/etc/nginx/nginx.conf"]
