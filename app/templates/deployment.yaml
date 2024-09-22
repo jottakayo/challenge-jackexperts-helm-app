@@ -26,6 +26,7 @@ spec:
         - name: html-volume
           mountPath: /usr/share/nginx/html/index.html
           subPath: customer.html
+          readOnly: false
       volumes:
       - name: html-volume
         configMap:
