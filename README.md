@@ -70,7 +70,7 @@ Página com HTML mostrada pelo NGINX, configurada dinamicamente via ConfigMap no
 
 Contém os templates Helm que definem os recursos do Kubernetes, como `ConfigMap`, `Deployment` e `Service`...
 
-**Referências**:
+**Referência**:
 - [Gui do Chart](https://medium.com/@maths.nunes/criando-e-instalando-um-chart-com-o-helm-c3504dc63419)
 
 ---
@@ -89,7 +89,7 @@ Mostra como a imagem é empacotada numa imagem Docker com NGINX, configurando pe
 
 Vai declarar valores usados pelos templates Helm, Deixa mais simples as mudanças da aplicação sem modificar diretamente os templates.
 
-**Referências**:
+**Referência**:
 - [Helm values.yaml](https://helm.sh/pt/docs/glossary/#:~:text=Valores%20de%20Configuração%20(values.&text=Valores%20de%20configuração%20são%20uma,ser%20sobrescritas%20durante%20a%20instalação.))
 
 ---
@@ -98,7 +98,7 @@ Vai declarar valores usados pelos templates Helm, Deixa mais simples as mudança
 
 Metadados(Pequenas informações) sobre o Helm chart, como o nome.
 
-**Referências**:
+**Referência**:
 - [Helm chart.yaml](https://www.freecodecamp.org/portuguese/news/o-que-e-um-helm-chart-um-tutorial-para-iniciantes-no-kubernetes/)
 
 ---
@@ -107,7 +107,7 @@ Metadados(Pequenas informações) sobre o Helm chart, como o nome.
 
 Tem os arquivos do Terraform usados para provisionar o cluster AKS.
 
-**Referências**:
+**Referência**:
 - [Tutorial da Hashicorp](https://learn.hashicorp.com/tutorials/terraform/aks)
 
 ---
