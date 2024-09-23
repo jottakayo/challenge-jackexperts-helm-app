@@ -130,15 +130,3 @@ A imagem `nginx:alpine` é pequena e leve. Especificado a plataforma `amd64` por
 Criado o usuário `jack` para rodar o NGINX sem privilégios de root, por segurança. Garantido que todos os diretórios necessários do NGINX fosse de propriedade do `jack`, evitando problemas de permissão como o da imagem abaixo.
 
 <img src="./img/dockererro.png" alt="jackexpert" width="400"/>
-
-### Copiando Arquivos HTML
-Motivo: Esse comando copia os arquivos HTML da máquina local para o container, garantindo que o NGINX possa servir esses arquivos corretamente.
-
-### 4. Ajuste de Permissões e Arquivo `.pid`
-Motivo: O arquivo `.pid` do NGINX é criado e as permissões são ajustadas para `jack`. Sem isso, o NGINX não conseguiria iniciar corretamente, pois não teria permissões suficientes para controlar seus processos.
-
-### 5. Permissão para Rodar na Porta 80
-Motivo: A porta 80 geralmente requer privilégios de root. Com `setcap`, permitimos que o NGINX acesse a porta 80 mesmo rodando como um usuário sem privilégios. Inicialmente, você poderia tentar configurar o NGINX para rodar na porta 8080, mas ao não conseguir, utilizou essa solução. Ela foi correta e mantém a segurança, já que minimiza o escopo de permissões necessárias.
-
-### 6. Expondo a Porta e Definindo o Usuário
-Motivo: Expondo a porta 80 para receber conexões HTTP e definindo `jack` como o usuário que irá rodar o processo do NGINX, garantimos que a aplicação funcione com as permissões mínimas necessárias para a segurança.
