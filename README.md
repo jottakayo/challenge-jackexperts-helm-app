@@ -129,4 +129,24 @@ A imagem `nginx:alpine` é pequena e leve. Especificado a plataforma `amd64` por
 ### Criação de Usuário Não-root
 Criado o usuário `jack` para rodar o NGINX sem privilégios de root, por segurança. Garantido que todos os diretórios necessários do NGINX fosse de propriedade do `jack`, evitando problemas de permissão como o da imagem abaixo.
 
-<img src="./img/dockererro.png" alt="jackexpert" width="400"/>
+<img src="./img/dockererro.png" alt="jackexpert" width="500"/>
+
+### Ajuste de Permissões e Arquivo `.pid`
+O arquivo `.pid` do NGINX foi criado e as permissões foram ajustadas para `jack`. Sem isso, o NGINX não conseguiria iniciar corretamente como visto na imagem acima, pois não teria permissões suficientes.
+
+```dockerfile
+RUN touch /var/run/nginx.pid \
+&& chown -R jack:jack /var/run/nginx.pid \
+&& chmod -R 755 /usr/share/nginx/html
+```
+
+### Permissão para Rodar na Porta 80
+A porta 80 requer privilégios de root. O `setcap` usado, permitiu que NGINX acesse a porta 80 mesmo rodando com o `jack`que não tem permissão de root, mas já que estou usando a versão `nginx:alpine` que é pequena e leve usei o `libcap` para poder usar o `setcap`.
+
+### Expondo a Porta e Definindo o Usuário
+Expus a porta 80 para receber conexões HTTP e definindo o user `jack` como o usuário que irá rodar no NGINX.
+
+```dockerfile
+EXPOSE 80
+USER jack
+```
