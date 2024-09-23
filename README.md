@@ -38,3 +38,5 @@ Ferramentas utilizadas para rodar o projeto:
     - [Instalação e documentação do Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 
 > **Dica:** Olhe bem se as ferramentas foram configuradas e nas versões mais atuais, para evitar erros de compatibilidade.
+
+Estrutura do Projeto
