@@ -276,17 +276,12 @@ Uma parte do deploy foi a exposição do serviço ao tráfego externo. Utilizei 
 
 ## Acesse a landing page !!
 
-Este projeto demonstrou a implementação de uma aplicação web simples, com uma página HTML customizável via ConfigMap, usando Helm para gerenciar o ciclo de vida da aplicação no Kubernetes. O uso de GitHub Actions para CI/CD permitiu um fluxo contínuo desde o build da imagem Docker até o deploy automatizado no AKS. 
-
-A seguir, veja a pagina web em funcionamento:
-
-[![Meu Site](./path-to-image.png)](http://meu-dominio.com)
+[![Meu Site](./img/Site.png)](http://challenge-jack.wgsolution.com.br/)
 
 **Clique na imagem acima ou no link abaixo para acessar o site!**
 
 👉 **[Acesse o site aqui!](http://challenge-jack.wgsolution.com.br/)** 👈
 
-Todos os desafios propostos pela JackExperts foram cumpridos, e este projeto destaca a capacidade de integrar infraestrutura como código com práticas modernas de DevOps, garantindo agilidade e segurança.
 
 ---
 Desafio realizado para a empresa **JackExperts**.
