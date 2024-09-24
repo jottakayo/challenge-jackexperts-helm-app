@@ -222,11 +222,11 @@ A criação de uma rede virtual é importante para a comunicação entre os recu
 
 - **azurerm_virtual_network**: VNet com o espaço de endereço `10.0.0.0/16`.
 
-### 3. Subnets (subnets.tf)
+### Subnets (subnets.tf)
 
 - **azurerm_subnet**: Permite o controle do tráfego e recursos alocados a cada subnet.
 
-### 4. Cluster AKS (aks.tf)
+### Cluster AKS (aks.tf)
 
 A criação do cluster AKS:
 
