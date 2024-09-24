@@ -272,3 +272,21 @@ Esse objeto se torna o ponto central de controle de todos os arquivos relacionad
 ### Exposição Externa com o Service LoadBalancer
 
 Uma parte do deploy foi a exposição do serviço ao tráfego externo. Utilizei o **Service** do tipo **LoadBalancer**. O Kubernetes, por padrão, não expõe os pods diretamente ao tráfego externo(Acredite). Assim, o **Service LoadBalancer** atua como um intermediário, criando um IP externo e garantindo que o tráfego externo exista.
+
+
+## Acesse a landing page !!
+
+Este projeto demonstrou a implementação de uma aplicação web simples, com uma página HTML customizável via ConfigMap, usando Helm para gerenciar o ciclo de vida da aplicação no Kubernetes. O uso de GitHub Actions para CI/CD permitiu um fluxo contínuo desde o build da imagem Docker até o deploy automatizado no AKS. 
+
+A seguir, veja a pagina web em funcionamento:
+
+[![Meu Site](./path-to-image.png)](http://meu-dominio.com)
+
+**Clique na imagem acima ou no link abaixo para acessar o site!**
+
+👉 **[Acesse o site aqui!](http://challenge-jack.wgsolution.com.br/)** 👈
+
+Todos os desafios propostos pela JackExperts foram cumpridos, e este projeto destaca a capacidade de integrar infraestrutura como código com práticas modernas de DevOps, garantindo agilidade e segurança.
+
+---
+Desafio realizado para a empresa **JackExperts**.

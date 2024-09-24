@@ -49,9 +49,21 @@ data:
                 text-align: center;
                 color: #f5c842;
             }
-            .links a {
-                color: #f5c842;
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 10px;
+                background-color: #f5c842;
+                color: #000000;
                 text-decoration: none;
+                border-radius: 5px;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .button:hover {
+                background-color: #d4a630;
             }
         </style>
     </head>
@@ -61,9 +73,9 @@ data:
             <p>{{ .Values.descricao }}</p>
         </div>
         <div class="links">
-            <p>Nos siga no insta: <a href="{{ .Values.link1 }}" target="_blank">jackexperts</a></p>
-            <p>E não perca nosso evento ^^: <a href="{{ .Values.link2 }}" target="_blank">DevOps Day Brasília</a></p>
-            <p>Vem nos conhecer ^^: <a href="{{ .Values.link3 }}" target="_blank">Um time de especialistas</a></p>
+            <a class="button" href="{{ .Values.link1 }}" target="_blank">Siga-nos no Instagram</a>
+            <a class="button" href="{{ .Values.link2 }}" target="_blank">DevOps Day Brasília</a>
+            <a class="button" href="{{ .Values.link3 }}" target="_blank">Conheça nosso time</a>
         </div>
     </body>
     </html>

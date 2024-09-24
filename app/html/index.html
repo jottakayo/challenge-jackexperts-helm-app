@@ -16,33 +16,45 @@
             color: #ffffff; 
         }
         .style {
-        text-align: center;
-        font-size: 36px;
-        color: #f5c842; 
-        padding: 20px;
-        border: 2px solid #ffffff;
-        background-color: #1c1c1c; 
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    .customer {
-        text-align: center;
-        font-size: 18px;
-        color: #cccccc;
-        padding: 15px;
-        border: 1px solid #4f4f4f;
-        background-color: #2c2c2c;
-        border-radius: 8px; 
-    }
-    .links {
+            text-align: center;
+            font-size: 36px;
+            color: #f5c842; 
+            padding: 20px;
+            border: 2px solid #ffffff;
+            background-color: #1c1c1c; 
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .customer {
+            text-align: center;
+            font-size: 18px;
+            color: #cccccc;
+            padding: 15px;
+            border: 1px solid #4f4f4f;
+            background-color: #2c2c2c;
+            border-radius: 8px; 
+        }
+        .links {
             margin-top: 20px;
             text-align: center;
             color: #f5c842;
-    }
-    .links a {
-            color: #f5c842;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #f5c842;
+            color: #000000;
             text-decoration: none;
-    }
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #d4a630;
+        }
     </style>
 </head>
 <body>
@@ -51,9 +63,9 @@
         <p>{{ .Values.descricao }}</p>
     </div>
     <div class="links">
-        <p>Nos siga no insta: <a href="{{ .Values.link1 }}" target="_blank">jackexperts</a></p>
-        <p>E não perca nosso evento ^^: <a href="{{ .Values.link2 }}" target="_blank">DevOps Day Brasília</a></p>
-        <p>Vem nos conhecer ^^: <a href="{{ .Values.link3 }}" target="_blank">Um time de especialistas</a></p>
+        <a class="button" href="{{ .Values.link1 }}" target="_blank">Siga-nos no Instagram</a>
+        <a class="button" href="{{ .Values.link2 }}" target="_blank">DevOps Day Brasília</a>
+        <a class="button" href="{{ .Values.link3 }}" target="_blank">Conheça nosso time</a>
     </div>
 </body>
 </html>
