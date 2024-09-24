@@ -256,4 +256,19 @@ e execução do comando,
    ```
 com esse comando foi permitido executar o kubectl, ai sim pude validar melhor o processo do projeto.
 
+# Deploy no Kubernetes
 
+### O Papel do `deployment.yaml`
+
+O objeto `deployment.yaml` é essencial pra orquestrar a implantação dos contêineres no Kubernetes. Define vários visões, como a quantidade das réplicas que a aplicação deve ter, o jeito que vai ser exposta, quais imagens Docker utilizar. É nele também que são definidas as configurações de segurança, como a pauta do usuário que o contêiner vai executar.
+
+Esse objeto se torna o ponto central de controle de todos os arquivos relacionados à execução do aplicativo dentro de um cluster Kubernetes. Nele tem:
+
+1. **Replicas**: Tem a quantidade de instâncias da aplicação em execução.
+2. **Containers**: A definição das imagens Docker e suas configurações.
+3. **Volumes**: A ligação entre o contêiner e os dados persistentes ou arquivos de configuração.
+4. **Contexto de Segurança**: Permissões dos contêineres que serão executados, como a do usuário que não é `root`.
+
+### Exposição Externa com o Service LoadBalancer
+
+Uma parte do deploy foi a exposição do serviço ao tráfego externo. Utilizei o **Service** do tipo **LoadBalancer**. O Kubernetes, por padrão, não expõe os pods diretamente ao tráfego externo(Acredite). Assim, o **Service LoadBalancer** atua como um intermediário, criando um IP externo e garantindo que o tráfego externo exista.

@@ -18,7 +18,7 @@ jobs:
         cd app
         docker build -t jottakayoml/html-custom-app:latest .
         docker push jottakayoml/html-custom-app:latest
-    - name: Deploy to Kubernetes
+    - name: Deploy para Kubernetes
       env:
         KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
       run: |
