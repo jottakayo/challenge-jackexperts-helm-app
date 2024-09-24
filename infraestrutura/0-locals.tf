@@ -10,4 +10,3 @@ locals {
   enable_auto_scaling  = false
   vm_size              = "Standard_B2s"
 }
-#az aks get-credentials --resource-group jackex --name dev-jackex-kubernetes

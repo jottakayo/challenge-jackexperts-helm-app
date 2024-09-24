@@ -195,3 +195,65 @@ Depois de realizar o deploy da aplicação com Helm, é importante testar e veri
 
 
 Com esses comandos, vai garantir que o ConfigMap foi criado corretamente, que os Pods estão funcionando e que o conteúdo HTML foi renderizado conforme esperado.
+
+## Provisionamento de Infraestrutura com Terraform
+
+### Definido Variáveis locais (locais.tf)
+
+O `locais.tf` contém os valores locais que foram reutilizados em vários pontos da infraestrutura criada:
+
+- **env**: Dar ambientes para facilitar a replicação em diferentes contextos.
+- **region**: Define a região da Azure onde os recursos da azure serão implantados.
+- **resource_group_name**: É o nome criado do grupo de recursos, serve pra agrupar todos os serviços.
+- **eks_version** e **orchestrator_version**: Versão do Kubernetes que foi utilizada.
+- **node_count** e **enable_auto_scaling**: Controla o número de nós no cluster criado e se o auto-escalamento está habilitado(que nesse caso, não esta).
+- **vm_size**: Tamanho da VM utilizada para os nós, `Standard_B2s`.
+
+### Provedor (provider.tf)
+
+O provedor da Azure (`azurerm`):
+
+- **"azurerm"**: Declara o uso da Azure como provedor.
+- **terraform backend**: O backend define onde o estado do Terraform será armazenado.
+
+### Rede Virtual (vpc.tf)
+
+A criação de uma rede virtual é importante para a comunicação entre os recursos.
+
+- **azurerm_virtual_network**: VNet com o espaço de endereço `10.0.0.0/16`.
+
+### 3. Subnets (subnets.tf)
+
+- **azurerm_subnet**: Permite o controle do tráfego e recursos alocados a cada subnet.
+
+### 4. Cluster AKS (aks.tf)
+
+A criação do cluster AKS:
+
+- **kubernetes_version**: Definido no `locais.tf`.
+- **node_resource_group**: Cria um grupo de recursos específico para os nós.
+- **network_profile**: Configura o plugin de rede "azure".
+- **default_node_pool**: Define o pool de nós.
+- **identity**: O cluster usa uma identidade gerenciada pelo sistema (`SystemAssigned`).
+
+### Variáveis (variables.tf)
+
+Usando as variáveis no Terraform é mais tranquilo reutilizar os valores em vários arquivos e cenários. As variáveis definidas (`resgroup_name`, `storage_account`, `default_location`) aumenta o dinamismo do código.
+
+---
+
+### Como Obter o Kubeconfig
+
+Uma parte muito importante é pegar o `kubeconfig` para poder interagir com o Kubernetes. Foi feito através de linha de comando através do Azure CLI, dessa forma:
+
+Foi instalado o `az` CLI da azure e feito a autentificação no Azure:
+   ```
+   az login
+   ```
+e execução do comando,
+ ```
+   az aks get-credentials --resource-group jackex --name jackex-kubernetes
+   ```
+com esse comando foi permitido executar o kubectl, ai sim pude validar melhor o processo do projeto.
+
+
