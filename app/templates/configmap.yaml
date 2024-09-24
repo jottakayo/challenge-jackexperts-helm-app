@@ -75,7 +75,7 @@ data:
         <div class="links">
             <a class="button" href="{{ .Values.link1 }}" target="_blank">Siga-nos no Instagram</a>
             <a class="button" href="{{ .Values.link2 }}" target="_blank">DevOps Day Brasília</a>
-            <a class="button" href="{{ .Values.link3 }}" target="_blank">Conheça nosso time</a>
+            <a class="button" href="{{ .Values.link3 }}" target="_blank">Mais sobre nosso time</a>
         </div>
     </body>
     </html>
