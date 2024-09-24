@@ -160,7 +160,8 @@ Antes de seguir com a configuração, crie a estrutura do seu Helm Chart com o s
 
 Comando usado para gerar a estrutura básica de diretórios e arquivos do Helm Chart.
 
-```helm create < Metadata >
+```
+helm create < Metadata >
 ```
 
 ## Estrutura dos Arquivos do Helm Chart
