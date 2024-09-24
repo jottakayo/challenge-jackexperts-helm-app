@@ -190,7 +190,7 @@ Depois de realizar o deploy da aplicação com Helm, é importante testar e veri
 
 - **Comando para verificar o ConfigMap e o Pod no cluster:**
 - **Comando para visualizar os logs da aplicação:**
-<img src="./img/errokube.png" alt="jackexpert" width="500" height="600"/>
+<img src="./img/errokube.png" alt="jackexpert" width="300" height="600"/>
 
 
 Com esses comandos, vai garantir que o ConfigMap foi criado corretamente, que os Pods estão funcionando e que o conteúdo HTML foi renderizado conforme esperado.
