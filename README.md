@@ -150,3 +150,47 @@ Expus a porta 80 para receber conexões HTTP e definindo o user `jack` como o us
 EXPOSE 80
 USER jack
 ```
+
+
+## Criação da Estrutura do Helm Chart
+
+Antes de seguir com a configuração, crie a estrutura do seu Helm Chart com o seguinte comando:
+
+### Gestão da Configuração com Helm
+
+Comando usado para gerar a estrutura básica de diretórios e arquivos do Helm Chart.
+
+```helm create < Metadata >
+```
+
+## Estrutura dos Arquivos do Helm Chart
+
+### chart.yaml 
+
+**Metadado:** `Chart.yaml` nele tem os metadados principais do Helm Chart. A versão do Chart (`version`) pode ser usada para contagem de versões.
+
+
+### Configmap.yaml
+
+**Dinamismo:** O `configmap.yaml` contém o template do HTML com placeholders (`{{ .Values.<variável> }}`) que foram substituídos pelos valores definidos no arquivo `values.yaml`. Isso permitiu customizar a página HTML sem precisar modificar ou reconstruir a imagem Docker.
+
+Comando para verificar o conteúdo dentro do ConfigMap:
+
+```
+kubectl describe configmap html-customer-config(nome do configmap) -n(namespace) app(Nome do namespace)
+```
+Existem formas diferentes de especificar os valores no `configmap.yaml`, o utilizado foi expor o HTML por completo, deve-se seguir bem a sintaxe do .yaml caso contrario ocorrera erros na chamada da variável.
+### values.yaml
+
+**Variáveis:**  `Values.yaml` tem os valores que foram injetados no HTML através do ConfigMap. As alterações no arquivo são automaticamente refletidas no conteúdo da página HTML sem a necessidade de rebuilds da image.
+
+## Teste e veja a Aplicação no Cluster
+
+Depois de realizar o deploy da aplicação com Helm, é importante testar e verificar se tudo está funcionando bem, a imagem a seguir é a pratica de como pode acontecer essa verificação.
+
+- **Comando para verificar o ConfigMap e o Pod no cluster:**
+- **Comando para visualizar os logs da aplicação:**
+<img src="./img/errokube.png" alt="jackexpert" width="500" height="600"/>
+
+
+Com esses comandos, vai garantir que o ConfigMap foi criado corretamente, que os Pods estão funcionando e que o conteúdo HTML foi renderizado conforme esperado.
