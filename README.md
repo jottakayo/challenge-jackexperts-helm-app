@@ -275,7 +275,7 @@ Uma parte do deploy foi a exposição do serviço ao tráfego externo. Utilizei 
 
 ---
 
-### ![CI/CD Icon](./path-to-your-image.png) EXTRA: Pipeline CI/CD com GitHub Actions
+### <span style="font-size: 2em;">∞</span>  ⚙️ EXTRA: Pipeline CI/CD com GitHub Actions ⚙️ <span style="font-size: 2em;">∞</span>
 
 #### Estrutura do Pipeline:
 1. **Ação ao Push na branch principal:**
@@ -324,7 +324,7 @@ E é com a criação de uma boa pipeline que consegui voltar mais o meu tempo a 
 ---
 
 
-## Acesse a landing page !!
+## Acesse a pagina !!
 
 [![Meu Site](./img/Site.png)](http://challenge-jack.wgsolution.com.br/)
 
@@ -335,6 +335,3 @@ E é com a criação de uma boa pipeline que consegui voltar mais o meu tempo a 
 
 ---
 Desafio realizado para a empresa **JackExperts**.
-````
-Remember, luck is when opportunity meets competence.
-```
