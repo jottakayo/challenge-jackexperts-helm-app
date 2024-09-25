@@ -273,6 +273,41 @@ Esse objeto se torna o ponto central de controle de todos os arquivos relacionad
 
 Uma parte do deploy foi a exposição do serviço ao tráfego externo. Utilizei o **Service** do tipo **LoadBalancer**. O Kubernetes, por padrão, não expõe os pods diretamente ao tráfego externo(Acredite). Assim, o **Service LoadBalancer** atua como um intermediário, criando um IP externo e garantindo que o tráfego externo exista.
 
+---
+### ![CI/CD Icon](./path-to-your-image.png) EXTRA: Pipeline CI/CD com GitHub Actions
+
+Neste projeto, foi implementada uma pipeline de CI/CD utilizando o GitHub Actions para automatizar o processo de build, push da imagem Docker e deploy no cluster Kubernetes. Abaixo, estão os pontos principais de sua configuração e como cada etapa contribui para um fluxo contínuo de integração e entrega.
+
+#### Estrutura do Pipeline:
+1. **Ação ao Push ou Pull Request na branch principal:**
+   O pipeline é disparado automaticamente sempre que um push ou pull request é feito na branch `main`, garantindo que as atualizações no código sejam refletidas rapidamente no ambiente de produção.
+
+2. **Build e Push da Imagem Docker:**
+   Ao ser acionado, o pipeline constrói a imagem Docker da aplicação a partir do diretório `app`, utilizando o arquivo Dockerfile. Em seguida, faz o push da imagem para o Docker Hub, garantindo que a versão mais recente da aplicação esteja disponível no repositório público.
+
+3. **Deploy Automatizado no Kubernetes (AKS):**
+   Após o push da imagem, o pipeline executa o deploy da aplicação no cluster Kubernetes usando Helm. O `helm upgrade --install` garante que a aplicação seja instalada ou atualizada automaticamente, sem necessidade de intervenção manual. 
+
+4. **Uso de Segredos e Segurança:**
+   O pipeline utiliza variáveis de ambiente seguras (`secrets`) para gerenciar credenciais de login no Docker Hub e no cluster Kubernetes, protegendo informações sensíveis, como senha do Docker e arquivo de configuração do Kubernetes.
+
+#### Benefícios:
+- **Automação Completa:** Todo o fluxo de integração e entrega da aplicação é automatizado, eliminando a necessidade de comandos manuais para cada etapa.
+- **Agilidade:** Com o pipeline configurado, qualquer mudança no código-fonte resulta em uma nova versão da aplicação sendo construída e disponibilizada automaticamente.
+- **Segurança:** O uso de variáveis secretas e práticas de autenticação automatizadas garante que o pipeline opere de maneira segura e confiável.
+
+Essa integração demonstra um ambiente de desenvolvimento moderno, onde a automação é central para a agilidade no deploy, seguindo as melhores práticas de CI/CD.
+
+---
+
+### Imagens do Projeto
+
+| ![Imagem 1](./path-to-image1.png) | ![Imagem 2](./path-to-image2.png) | ![Imagem 3](./path-to-image3.png) |
+|:---------------------------------:|:---------------------------------:|:---------------------------------:|
+| **Imagem 1**                      | **Imagem 2**                      | **Imagem 3**                      |
+
+---
+
 
 ## Acesse a landing page !!
 
@@ -285,3 +320,6 @@ Uma parte do deploy foi a exposição do serviço ao tráfego externo. Utilizei 
 
 ---
 Desafio realizado para a empresa **JackExperts**.
+````
+Remember, luck is when opportunity meets competence.
+```
