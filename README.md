@@ -273,6 +273,8 @@ Esse objeto se torna o ponto central de controle de todos os arquivos relacionad
 
 Uma parte do deploy foi a exposição do serviço ao tráfego externo. Utilizei o **Service** do tipo **LoadBalancer**. O Kubernetes, por padrão, não expõe os pods diretamente ao tráfego externo(Acredite). Assim, o **Service LoadBalancer** atua como um intermediário, criando um IP externo e garantindo que o tráfego externo exista.
 
+![Imagem 1](./img/analise.png)
+
 ---
 
 ### <span style="font-size: 2em;">∞</span>  ⚙️ EXTRA: Pipeline CI/CD com GitHub Actions ⚙️ <span style="font-size: 2em;">∞</span>
