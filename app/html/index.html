@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Values.titlo }}</title>
+    <title>Mostra isso caso não der certo renderizar com helm</title>
     <style>
         body {
             margin: 0;
@@ -58,14 +58,14 @@
     </style>
 </head>
 <body>
-    <h1 id="style">{{ .Values.headerTexto }}</h1>
+    <h1 id="style">Erro na variável {{ .Values.headerTexto }} não foi substituída</h1>
     <div id="customer">
-        <p>{{ .Values.descricao }}</p>
+        <p>A variável {{ .Values.descricao }} deu ruim ao ser renderizada.</p>
     </div>
     <div class="links">
-        <a class="button" href="{{ .Values.link1 }}" target="_blank">Siga-nos no Instagram</a>
-        <a class="button" href="{{ .Values.link2 }}" target="_blank">DevOps Day Brasília</a>
-        <a class="button" href="{{ .Values.link3 }}" target="_blank">Mais sobre nosso time</a>
+        <a class="button" href="{{ .Values.link1 }}" target="_blank">Link não deu {{ .Values.link1 }}</a>
+        <a class="button" href="{{ .Values.link2 }}" target="_blank">Link não deu {{ .Values.link2 }}</a>
+        <a class="button" href="{{ .Values.link3 }}" target="_blank">Link não deu {{ .Values.link3 }}</a>
     </div>
 </body>
 </html>
