@@ -36,7 +36,7 @@ Ferramentas utilizadas para rodar o projeto:
 - **Azure CLI**: CLI usada para interagir na nuvem da AKS.
     - [Instalação e documentação do Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 
-> **Dica:** Der uma boa olhada se as ferramentas foram configuradas e nas versões mais atuais, para evitar erros.
+> **Dica:**  Dê uma boa olhada se as ferramentas foram configuradas e nas versões mais atuais, para evitar erros.
 
 ## Estrutura do Projeto
 
@@ -238,7 +238,7 @@ A criação do cluster AKS:
 
 ### Variáveis (variables.tf)
 
-Usando as variáveis no Terraform é mais tranquilo reutilizar os valores em vários arquivos e cenários. As variáveis definidas (`resgroup_name`, `storage_account`, `default_location`) aumenta o dinamismo do código.
+Usar variáveis no Terraform torna mais fácil reutilizar os valores em vários arquivos e cenários. As variáveis definidas (`resgroup_name`, `storage_account`, `default_location`)aumentam o dinamismo do código.
 
 ---
 
