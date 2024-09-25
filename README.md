@@ -318,7 +318,7 @@ E é com a criação de uma boa pipeline que consegui voltar mais o meu tempo a 
 
 | ![Imagem 1](./img/tentativa-e-eero.png) | ![Imagem 2](./img/pipecode.png) | ![Imagem 3](./img/caminho-secrets.png) |
 |:---------------------------------:|:---------------------------------:|:---------------------------------:|
-| **Imagem 1**                      | **Imagem 2**                      | **Imagem 3**                      |
+| **Implantação**                      | **PIPELINE**                      | **Secrets**                      |
 
 
 ---
