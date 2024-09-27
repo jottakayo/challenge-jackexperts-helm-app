@@ -336,4 +336,4 @@ E é com a criação de uma boa pipeline que consegui voltar mais o meu tempo a 
 
 
 ---
-Desafio realizado para a empresa **JackExperts**. 
+Desafio realizado para a empresa **JackExperts**.
