@@ -269,7 +269,7 @@ Esse objeto se torna o ponto central de controle de todos os arquivos relacionad
 3. **Volumes**: A ligação entre o contêiner e os dados persistentes ou arquivos de configuração.
 4. **Contexto de Segurança**: Permissões dos contêineres que serão executados, como a do usuário que não é `root`.
 
-### Exposição Externa com o Service LoadBalancer
+### Exposição Externa com o Service LoadBalancer <img src="./img/img-lb.png" alt="Imagem 1" width="150" align="right"/>
 
 Uma parte do deploy foi a exposição do serviço ao tráfego externo. Utilizei o **Service** do tipo **LoadBalancer**. O Kubernetes, por padrão, não expõe os pods diretamente ao tráfego externo(Acredite). Assim, o **Service LoadBalancer** atua como um intermediário, criando um IP externo e garantindo que o tráfego externo exista.
 
